@@ -1,0 +1,44 @@
+
+:root {
+    font-family: Arial, sans-serif;
+    color: #202544;
+    background: #f3f5ff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    background: #f3f5ff;
+    color: #202544;
+}
+
+button {
+    background: #5145cd;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #3930a5;
+}
+
+input, select {
+    color: #202544;
+}
+
+h1, h2, h3, p {
+    color: #202544;
+}
