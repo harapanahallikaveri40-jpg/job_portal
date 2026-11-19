@@ -2084,16 +2084,18 @@ const loadData = useCallback(async () => {
                                                         "Not provided"}
                                                 </p>
 
-                                                {app.resume && (
-                                                    <a
-                                                        className="resume-link"
-                                                        href={`http://localhost:5000${app.resume}`}
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                    >
-                                                        View Candidate Resume ↗
-                                                    </a>
-                                                )}
+                                               
+{app.resume && (
+    <a
+        className="resume-link"
+        href={`https://job-internship-backend.onrender.com${app.resume}`}
+        target="_blank"
+        rel="noreferrer"
+    >
+        View Candidate Resume ↗
+    </a>
+)}
+
 
                                                 <label className="status-label">
                                                     Application Status
