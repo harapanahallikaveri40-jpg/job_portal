@@ -3,3 +3,4 @@ node_modules/
 backend/uploads/
 dist/
 target/
+backend/config/dumpsjob_portal_backup.sql

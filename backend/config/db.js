@@ -1,18 +1,27 @@
 
 const mysql = require("mysql2");
+const fs = require("fs");
+const path = require("path");
+require("dotenv").config();
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: "job_portal"
+    database: process.env.DB_NAME,
+    port: Number(process.env.DB_PORT || 4000),
+    ssl: {
+        ca: fs.readFileSync(
+            path.join(__dirname, "isrgrootx1.pem")
+        )
+    }
 });
 
 db.connect((err) => {
     if (err) {
-        console.log("Database connection failed:", err);
+        console.error("Database connection failed:", err.message);
     } else {
-        console.log("MySQL Database Connected Successfully!");
+        console.log("TiDB Cloud Connected Successfully!");
     }
 });
 
