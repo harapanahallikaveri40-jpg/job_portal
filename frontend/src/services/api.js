@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "https://job-internship-backend.onrender.com/api",
+    baseURL: "https://job-portal-backend-kdq5.onrender.com/api",
     headers: {
         "Content-Type": "application/json"
     }
@@ -18,7 +18,9 @@ API.interceptors.request.use(
 
         return config;
     },
-    (error) => Promise.reject(error)
+    (error) => {
+        return Promise.reject(error);
+    }
 );
 
 export default API;
