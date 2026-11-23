@@ -17,11 +17,28 @@ const adminRoutes = require("./routes/adminRoutes");
 
 const app = express();
 
-// Middleware
+// Allowed frontend origins
+const allowedOrigins = [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
+    "https://job-portal-y4iv.vercel.app"
+];
+
+// CORS Middleware
 app.use(cors({
-    origin: "https://job-portal-y4iv.vercel.app",
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
