@@ -24,7 +24,8 @@ const allowedOrigins = [
     "http://localhost:5175",
     "https://job-portal-y4iv.vercel.app",
     "https://job-portal-bc2yj4dok-acme-509d1.vercel.app",
-    "https://job-portal-k29bnpgin-acme-509d1.vercel.app"
+    "https://job-portal-k29bnpgin-acme-509d1.vercel.app",
+    "https://job-portal-egca9qcfs-acme-509d1.vercel.app"
 ];
 
 // CORS Middleware
